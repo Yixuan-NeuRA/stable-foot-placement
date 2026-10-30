@@ -1,0 +1,17 @@
+{
+ "blocks_left_out": [
+  "P09-V3",
+  "P14-V1"
+ ],
+ "candidates": 21713,
+ "kept": 21513,
+ "foot_advance": 4,
+ "gait_speed": 8,
+ "pendulum_length": 142,
+ "rejected_frame": 6,
+ "swing_time": 5,
+ "window_edge": 35,
+ "pendulum_length_by_participant": {
+  "P12": 142
+ }
+}

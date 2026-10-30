@@ -1,0 +1,277 @@
+SFP and Wang & Srinivasan regression, one grid of estimators
+steps.csv | dropped: P01, P09 | kept: all
+participants 16 | blocks 47 | cells 94 | steps 19674 | warm-up 50 | scored steps per cell 159 | total scored 14974
+checks passed: every rule causal and empty in its warm-up; refits exact
+
+Held-out RMSE of the landing about the target (mm), mean of the 16 participants
+                                                         A: fitted       B: pendulum
+                                                       ML       AP       ML       AP
+  moving average frozen after 50 steps               30.5     40.7     30.9     40.4
+  moving average refitted, all steps                 27.1     35.5     29.3     38.3
+  moving average refitted, last 10 steps             31.9     46.0     29.0     37.5
+  moving average refitted, last 20 steps             28.4     39.8     28.6     36.9
+  moving average refitted, last 30 steps             27.7     37.5     28.5     36.9
+  moving average refitted, last 40 steps             27.3     36.6     28.6     37.1
+  moving average refitted, last 50 steps             27.1     36.0     28.6     37.2
+  least squares  frozen after 50 steps               30.5     40.6     30.9     39.8
+  least squares  refitted, all steps                 26.9     35.5     28.5     36.8
+  least squares  refitted, last 10 steps             35.0     53.1     32.2     58.2
+  least squares  refitted, last 20 steps             29.2     42.1     29.2     40.2
+  least squares  refitted, last 30 steps             28.1     38.7     28.7     38.0
+  least squares  refitted, last 40 steps             27.4     37.6     28.4     37.3
+  least squares  refitted, last 50 steps             27.1     36.6     28.3     36.8
+  linear trend   frozen after 50 steps               42.5     57.6     44.6     58.2
+  linear trend   refitted, all steps                 27.0     35.6     28.8     37.5
+  linear trend   refitted, last 10 steps             37.1     51.9     33.2     42.6
+  linear trend   refitted, last 20 steps             30.4     42.2     30.4     38.8
+  linear trend   refitted, last 30 steps             28.9     39.0     29.5     37.9
+  linear trend   refitted, last 40 steps             28.1     37.6     29.1     37.4
+  linear trend   refitted, last 50 steps             27.7     36.9     28.9     37.3
+  best constant (in sample)                          25.7     32.9     28.5     37.0
+  best memory (in sample)                            26.5     34.6     28.0     35.9
+  two lags, refitted, all steps                       nan      nan     28.4     36.7
+  three lags, refitted, all steps                     nan      nan     28.4     36.7
+  SFP (XCoM + the selected rule)                                       29.3     38.3
+
+SFP against each of the 21 A rules (+: SFP better)
+  ML  moving average frozen after 50 steps          +1.19 mm   t(15) =  1.19  p = 0.2533 | Wilcoxon p = 0.2312 | better in 10/16
+  AP  moving average frozen after 50 steps          +2.44 mm   t(15) =  1.25  p = 0.2292 | Wilcoxon p = 0.2114 | better in 10/16
+  ML  moving average refitted, all steps            -2.21 mm   t(15) = -3.18  p = 0.0063 | Wilcoxon p = 0.0001 | better in 1/16
+  AP  moving average refitted, all steps            -2.84 mm   t(15) = -2.14  p = 0.0494 | Wilcoxon p = 0.0131 | better in 5/16
+  ML  moving average refitted, last 10 steps        +2.59 mm   t(15) =  2.72  p = 0.0157 | Wilcoxon p = 0.0250 | better in 13/16
+  AP  moving average refitted, last 10 steps        +7.65 mm   t(15) =  3.21  p = 0.0059 | Wilcoxon p = 0.0250 | better in 14/16
+  ML  moving average refitted, last 20 steps        -0.88 mm   t(15) = -0.97  p = 0.3483 | Wilcoxon p = 0.8603 | better in 8/16
+  AP  moving average refitted, last 20 steps        +1.49 mm   t(15) =  0.74  p = 0.4725 | Wilcoxon p = 0.0577 | better in 14/16
+  ML  moving average refitted, last 30 steps        -1.60 mm   t(15) = -1.90  p = 0.0770 | Wilcoxon p = 0.1754 | better in 7/16
+  AP  moving average refitted, last 30 steps        -0.85 mm   t(15) = -0.46  p = 0.6537 | Wilcoxon p = 0.1928 | better in 12/16
+  ML  moving average refitted, last 40 steps        -2.02 mm   t(15) = -2.36  p = 0.0323 | Wilcoxon p = 0.0335 | better in 4/16
+  AP  moving average refitted, last 40 steps        -1.67 mm   t(15) = -0.94  p = 0.3625 | Wilcoxon p = 0.9799 | better in 7/16
+  ML  moving average refitted, last 50 steps        -2.21 mm   t(15) = -2.73  p = 0.0154 | Wilcoxon p = 0.0034 | better in 4/16
+  AP  moving average refitted, last 50 steps        -2.28 mm   t(15) = -1.33  p = 0.2039 | Wilcoxon p = 0.4037 | better in 6/16
+  ML  least squares  frozen after 50 steps          +1.18 mm   t(15) =  1.06  p = 0.3077 | Wilcoxon p = 0.2114 | better in 11/16
+  AP  least squares  frozen after 50 steps          +2.33 mm   t(15) =  1.16  p = 0.2639 | Wilcoxon p = 0.1754 | better in 10/16
+  ML  least squares  refitted, all steps            -2.39 mm   t(15) = -3.35  p = 0.0044 | Wilcoxon p = 0.0002 | better in 1/16
+  AP  least squares  refitted, all steps            -2.77 mm   t(15) = -2.06  p = 0.0577 | Wilcoxon p = 0.0386 | better in 5/16
+  ML  least squares  refitted, last 10 steps        +5.65 mm   t(15) =  5.73  p = 0.0000 | Wilcoxon p = 0.0002 | better in 14/16
+  AP  least squares  refitted, last 10 steps       +14.84 mm   t(15) =  5.50  p = 0.0001 | Wilcoxon p = 0.0003 | better in 14/16
+  ML  least squares  refitted, last 20 steps        -0.14 mm   t(15) = -0.15  p = 0.8798 | Wilcoxon p = 0.7057 | better in 10/16
+  AP  least squares  refitted, last 20 steps        +3.80 mm   t(15) =  1.79  p = 0.0929 | Wilcoxon p = 0.0577 | better in 14/16
+  ML  least squares  refitted, last 30 steps        -1.24 mm   t(15) = -1.45  p = 0.1666 | Wilcoxon p = 0.3484 | better in 7/16
+  AP  least squares  refitted, last 30 steps        +0.39 mm   t(15) =  0.20  p = 0.8432 | Wilcoxon p = 0.0833 | better in 13/16
+  ML  least squares  refitted, last 40 steps        -1.89 mm   t(15) = -2.17  p = 0.0467 | Wilcoxon p = 0.0739 | better in 4/16
+  AP  least squares  refitted, last 40 steps        -0.71 mm   t(15) = -0.38  p = 0.7059 | Wilcoxon p = 0.2522 | better in 11/16
+  ML  least squares  refitted, last 50 steps        -2.18 mm   t(15) = -2.66  p = 0.0177 | Wilcoxon p = 0.0131 | better in 4/16
+  AP  least squares  refitted, last 50 steps        -1.68 mm   t(15) = -0.95  p = 0.3578 | Wilcoxon p = 0.7057 | better in 8/16
+  ML  linear trend   frozen after 50 steps         +13.14 mm   t(15) =  6.98  p = 0.0000 | Wilcoxon p = 0.0000 | better in 16/16
+  AP  linear trend   frozen after 50 steps         +19.27 mm   t(15) =  6.41  p = 0.0000 | Wilcoxon p = 0.0000 | better in 16/16
+  ML  linear trend   refitted, all steps            -2.37 mm   t(15) = -3.05  p = 0.0082 | Wilcoxon p = 0.0004 | better in 2/16
+  AP  linear trend   refitted, all steps            -2.67 mm   t(15) = -1.91  p = 0.0752 | Wilcoxon p = 0.0739 | better in 5/16
+  ML  linear trend   refitted, last 10 steps        +7.73 mm   t(15) =  5.93  p = 0.0000 | Wilcoxon p = 0.0002 | better in 14/16
+  AP  linear trend   refitted, last 10 steps       +13.60 mm   t(15) =  5.52  p = 0.0001 | Wilcoxon p = 0.0002 | better in 14/16
+  ML  linear trend   refitted, last 20 steps        +1.03 mm   t(15) =  1.03  p = 0.3183 | Wilcoxon p = 0.2312 | better in 12/16
+  AP  linear trend   refitted, last 20 steps        +3.88 mm   t(15) =  1.86  p = 0.0833 | Wilcoxon p = 0.0577 | better in 14/16
+  ML  linear trend   refitted, last 30 steps        -0.38 mm   t(15) = -0.40  p = 0.6913 | Wilcoxon p = 0.6322 | better in 10/16
+  AP  linear trend   refitted, last 30 steps        +0.67 mm   t(15) =  0.35  p = 0.7331 | Wilcoxon p = 0.0654 | better in 13/16
+  ML  linear trend   refitted, last 40 steps        -1.18 mm   t(15) = -1.29  p = 0.2152 | Wilcoxon p = 0.7057 | better in 8/16
+  AP  linear trend   refitted, last 40 steps        -0.69 mm   t(15) = -0.37  p = 0.7133 | Wilcoxon p = 0.1928 | better in 12/16
+  ML  linear trend   refitted, last 50 steps        -1.58 mm   t(15) = -1.85  p = 0.0839 | Wilcoxon p = 0.2114 | better in 6/16
+  AP  linear trend   refitted, last 50 steps        -1.45 mm   t(15) = -0.81  p = 0.4311 | Wilcoxon p = 0.4637 | better in 9/16
+  ML: best A rule LS_expand (26.9 mm); SFP better than 4, worse than 6 ['LR_expand', 'LS_expand', 'LS_window50', 'MA_expand', 'MA_window40', 'MA_window50']
+  AP: best A rule MA_expand (35.5 mm); SFP better than 4, worse than 2 ['LS_expand', 'MA_expand']
+
+Fitted against pendulum weights, the same rule and scheme (+: fitted weights better)
+  ML  moving average frozen after 50 steps          +0.37 mm   t(15) =  0.57  p = 0.5742 | Wilcoxon p = 0.7436 | better in 9/16
+  AP  moving average frozen after 50 steps          -0.31 mm   t(15) = -0.31  p = 0.7622 | Wilcoxon p = 0.8999 | better in 8/16
+  ML  moving average refitted, all steps            +2.21 mm   t(15) =  3.18  p = 0.0063 | Wilcoxon p = 0.0001 | better in 15/16
+  AP  moving average refitted, all steps            +2.84 mm   t(15) =  2.14  p = 0.0494 | Wilcoxon p = 0.0131 | better in 11/16
+  ML  moving average refitted, last 10 steps        -2.86 mm   t(15) = -4.87  p = 0.0002 | Wilcoxon p = 0.0008 | better in 1/16
+  AP  moving average refitted, last 10 steps        -8.43 mm   t(15) = -6.84  p = 0.0000 | Wilcoxon p = 0.0001 | better in 1/16
+  ML  moving average refitted, last 20 steps        +0.11 mm   t(15) =  0.19  p = 0.8519 | Wilcoxon p = 0.6322 | better in 5/16
+  AP  moving average refitted, last 20 steps        -2.93 mm   t(15) = -2.87  p = 0.0117 | Wilcoxon p = 0.0110 | better in 2/16
+  ML  moving average refitted, last 30 steps        +0.81 mm   t(15) =  1.38  p = 0.1865 | Wilcoxon p = 0.3225 | better in 10/16
+  AP  moving average refitted, last 30 steps        -0.54 mm   t(15) = -0.53  p = 0.6046 | Wilcoxon p = 0.1591 | better in 3/16
+  ML  moving average refitted, last 40 steps        +1.27 mm   t(15) =  2.00  p = 0.0636 | Wilcoxon p = 0.0507 | better in 11/16
+  AP  moving average refitted, last 40 steps        +0.49 mm   t(15) =  0.45  p = 0.6582 | Wilcoxon p = 0.9799 | better in 7/16
+  ML  moving average refitted, last 50 steps        +1.51 mm   t(15) =  2.45  p = 0.0270 | Wilcoxon p = 0.0042 | better in 12/16
+  AP  moving average refitted, last 50 steps        +1.19 mm   t(15) =  1.07  p = 0.3035 | Wilcoxon p = 0.5619 | better in 9/16
+  ML  least squares  frozen after 50 steps          +0.35 mm   t(15) =  0.62  p = 0.5433 | Wilcoxon p = 0.7436 | better in 10/16
+  AP  least squares  frozen after 50 steps          -0.83 mm   t(15) = -0.48  p = 0.6398 | Wilcoxon p = 0.4637 | better in 5/16
+  ML  least squares  refitted, all steps            +1.59 mm   t(15) =  3.84  p = 0.0016 | Wilcoxon p = 0.0002 | better in 15/16
+  AP  least squares  refitted, all steps            +1.25 mm   t(15) =  2.26  p = 0.0394 | Wilcoxon p = 0.0577 | better in 10/16
+  ML  least squares  refitted, last 10 steps        -2.81 mm   t(15) = -4.45  p = 0.0005 | Wilcoxon p = 0.0034 | better in 1/16
+  AP  least squares  refitted, last 10 steps        +5.02 mm   t(15) =  2.03  p = 0.0599 | Wilcoxon p = 0.1754 | better in 9/16
+  ML  least squares  refitted, last 20 steps        +0.02 mm   t(15) =  0.03  p = 0.9763 | Wilcoxon p = 0.8209 | better in 8/16
+  AP  least squares  refitted, last 20 steps        -1.94 mm   t(15) = -2.67  p = 0.0175 | Wilcoxon p = 0.0250 | better in 4/16
+  ML  least squares  refitted, last 30 steps        +0.60 mm   t(15) =  1.33  p = 0.2047 | Wilcoxon p = 0.4637 | better in 8/16
+  AP  least squares  refitted, last 30 steps        -0.67 mm   t(15) = -1.10  p = 0.2886 | Wilcoxon p = 0.1591 | better in 6/16
+  ML  least squares  refitted, last 40 steps        +0.99 mm   t(15) =  2.13  p = 0.0497 | Wilcoxon p = 0.0654 | better in 11/16
+  AP  least squares  refitted, last 40 steps        -0.32 mm   t(15) = -0.43  p = 0.6700 | Wilcoxon p = 0.5966 | better in 6/16
+  ML  least squares  refitted, last 50 steps        +1.18 mm   t(15) =  2.68  p = 0.0171 | Wilcoxon p = 0.0092 | better in 12/16
+  AP  least squares  refitted, last 50 steps        +0.15 mm   t(15) =  0.19  p = 0.8482 | Wilcoxon p = 1.0000 | better in 8/16
+  ML  linear trend   frozen after 50 steps          +2.12 mm   t(15) =  1.32  p = 0.2069 | Wilcoxon p = 0.1297 | better in 12/16
+  AP  linear trend   frozen after 50 steps          +0.60 mm   t(15) =  0.26  p = 0.7963 | Wilcoxon p = 0.8603 | better in 8/16
+  ML  linear trend   refitted, all steps            +1.84 mm   t(15) =  3.27  p = 0.0051 | Wilcoxon p = 0.0001 | better in 15/16
+  AP  linear trend   refitted, all steps            +1.86 mm   t(15) =  2.35  p = 0.0332 | Wilcoxon p = 0.0155 | better in 11/16
+  ML  linear trend   refitted, last 10 steps        -3.80 mm   t(15) = -5.12  p = 0.0001 | Wilcoxon p = 0.0004 | better in 1/16
+  AP  linear trend   refitted, last 10 steps        -9.31 mm   t(15) = -8.63  p = 0.0000 | Wilcoxon p = 0.0000 | better in 0/16
+  ML  linear trend   refitted, last 20 steps        +0.01 mm   t(15) =  0.02  p = 0.9817 | Wilcoxon p = 0.5619 | better in 5/16
+  AP  linear trend   refitted, last 20 steps        -3.35 mm   t(15) = -4.26  p = 0.0007 | Wilcoxon p = 0.0008 | better in 2/16
+  ML  linear trend   refitted, last 30 steps        +0.57 mm   t(15) =  1.10  p = 0.2870 | Wilcoxon p = 0.4332 | better in 10/16
+  AP  linear trend   refitted, last 30 steps        -1.06 mm   t(15) = -1.44  p = 0.1711 | Wilcoxon p = 0.1439 | better in 5/16
+  ML  linear trend   refitted, last 40 steps        +0.98 mm   t(15) =  1.89  p = 0.0782 | Wilcoxon p = 0.1297 | better in 10/16
+  AP  linear trend   refitted, last 40 steps        -0.19 mm   t(15) = -0.27  p = 0.7937 | Wilcoxon p = 0.6322 | better in 6/16
+  ML  linear trend   refitted, last 50 steps        +1.20 mm   t(15) =  2.31  p = 0.0355 | Wilcoxon p = 0.0155 | better in 11/16
+  AP  linear trend   refitted, last 50 steps        +0.47 mm   t(15) =  0.65  p = 0.5276 | Wilcoxon p = 0.7057 | better in 9/16
+
+Calibration length: both calibrated once on the first n steps and frozen, scored from step 100 (+: regression better)
+  ML  calibrated on 10 steps                        -5.27 mm   t(15) = -3.82  p = 0.0017 | Wilcoxon p = 0.0008 | better in 1/16
+  AP  calibrated on 10 steps                       -11.49 mm   t(15) = -2.20  p = 0.0442 | Wilcoxon p = 0.0008 | better in 1/16
+  ML  calibrated on 20 steps                        -1.37 mm   t(15) = -1.90  p = 0.0769 | Wilcoxon p = 0.0507 | better in 4/16
+  AP  calibrated on 20 steps                        -4.82 mm   t(15) = -1.42  p = 0.1755 | Wilcoxon p = 0.0052 | better in 3/16
+  ML  calibrated on 30 steps                        -0.25 mm   t(15) = -0.36  p = 0.7242 | Wilcoxon p = 0.3755 | better in 7/16
+  AP  calibrated on 30 steps                        -1.70 mm   t(15) = -0.70  p = 0.4955 | Wilcoxon p = 0.9399 | better in 8/16
+  ML  calibrated on 50 steps                        +0.30 mm   t(15) =  0.43  p = 0.6713 | Wilcoxon p = 0.8209 | better in 9/16
+  AP  calibrated on 50 steps                        -0.26 mm   t(15) = -0.20  p = 0.8435 | Wilcoxon p = 1.0000 | better in 7/16
+  ML  calibrated on 100 steps                       +1.91 mm   t(15) =  2.58  p = 0.0210 | Wilcoxon p = 0.0013 | better in 14/16
+  AP  calibrated on 100 steps                       +0.51 mm   t(15) =  0.62  p = 0.5475 | Wilcoxon p = 0.3755 | better in 10/16
+
+Learning curve: both refitted from a cell's first step; RMSE for a step with i same-foot steps before it
+  ML       3-4 steps before: SFP   31.1  WS   88.8  SFP better in 16/16  Wilcoxon p = 0.0000
+  ML       5-9 steps before: SFP   32.9  WS   38.5  SFP better in 13/16  Wilcoxon p = 0.0063
+  ML     10-19 steps before: SFP   25.9  WS   27.3  SFP better in 10/16  Wilcoxon p = 0.0934
+  ML     20-29 steps before: SFP   30.2  WS   29.5  SFP better in  7/16  Wilcoxon p = 0.5966
+  ML     30-49 steps before: SFP   29.6  WS   29.1  SFP better in  4/16  Wilcoxon p = 0.1167
+  ML     50-99 steps before: SFP   28.7  WS   27.2  SFP better in  2/16  Wilcoxon p = 0.0027
+  ML      100+ steps before: SFP   30.6  WS   27.9  SFP better in  1/16  Wilcoxon p = 0.0001
+  AP       3-4 steps before: SFP   35.4  WS  201.5  SFP better in 15/16  Wilcoxon p = 0.0001
+  AP       5-9 steps before: SFP   35.9  WS   47.3  SFP better in 15/16  Wilcoxon p = 0.0008
+  AP     10-19 steps before: SFP   33.5  WS   37.5  SFP better in 12/16  Wilcoxon p = 0.0182
+  AP     20-29 steps before: SFP   37.5  WS   40.0  SFP better in 11/16  Wilcoxon p = 0.0833
+  AP     30-49 steps before: SFP   39.5  WS   37.8  SFP better in  5/16  Wilcoxon p = 0.0934
+  AP     50-99 steps before: SFP   39.7  WS   38.5  SFP better in  6/16  Wilcoxon p = 0.2979
+  AP      100+ steps before: SFP   41.0  WS   36.7  SFP better in  4/16  Wilcoxon p = 0.0092
+
+Transfer: calibrated on one whole block, applied to another block of the same participant and side
+  ML  transferred to another block                  +1.83 mm   t(15) =  1.84  p = 0.0852 | Wilcoxon p = 0.0386 | better in 13/16
+  AP  transferred to another block                  +2.73 mm   t(15) =  2.91  p = 0.0107 | Wilcoxon p = 0.0063 | better in 13/16
+
+Fitted weights (whole-cell Wang & Srinivasan fits) against the pendulum's 1 and 1/w0
+  ML  position b1 median 1.01 (IQR 0.69-1.32); velocity b2*w0 median 1.07 (IQR 0.61-1.52); a participant's blocks differ by a median 0.88 x 1/w0
+  AP  position b1 median 0.71 (IQR 0.52-0.97); velocity b2*w0 median 0.97 (IQR 0.77-1.26); a participant's blocks differ by a median 0.72 x 1/w0
+
+Ordered sequence (B): each step tested against the rule it extends, stopping at the first non-rejection (Wilcoxon, alpha 0.05)
+  ML:
+    update the mean (frozen -> refitted)      +1.57 mm  t p = 0.015  Wilcoxon p = 0.000  16/16  rejected, continue
+    add one lag (K = 0 -> 1)                  +0.80 mm  t p = 0.056  Wilcoxon p = 0.323  8/16  not rejected, stop
+    add a second lag (K = 1 -> 2)             +0.09 mm  t p = 0.407  Wilcoxon p = 0.821  7/16  (after the stop)
+    add a third lag (K = 2 -> 3)              +0.05 mm  t p = 0.583  Wilcoxon p = 0.821  6/16  (after the stop)
+    selected: moving average refitted, all steps
+  AP:
+    update the mean (frozen -> refitted)      +2.13 mm  t p = 0.085  Wilcoxon p = 0.000  16/16  rejected, continue
+    add one lag (K = 0 -> 1)                  +1.52 mm  t p = 0.140  Wilcoxon p = 0.375  9/16  not rejected, stop
+    add a second lag (K = 1 -> 2)             +0.04 mm  t p = 0.870  Wilcoxon p = 0.051  3/16  (after the stop)
+    add a third lag (K = 2 -> 3)              +0.03 mm  t p = 0.836  Wilcoxon p = 0.130  4/16  (after the stop)
+    selected: moving average refitted, all steps
+
+The first lag, K = 0 -> K = 1, per participant (+: the lag helps)
+  ML  P14 -0.38  P10 -0.29  P03 -0.09  P02 -0.09  P11 -0.05  P05 -0.03  P13 -0.00  P04 -0.00  P07 +0.00  P08 +0.14  P17 +0.22  P18 +1.04  P16 +1.67  P15 +2.29  P12 +3.31  P06 +5.02
+       mean +0.80 | median -0.00 | K = 1 better in 8/16 | t p = 0.056, Wilcoxon p = 0.323
+  AP  P07 -0.67  P17 -0.34  P18 -0.32  P15 -0.23  P11 -0.16  P13 -0.16  P16 -0.07  P10 +0.05  P14 +0.13  P08 +0.19  P05 +0.27  P04 +0.48  P02 +0.49  P03 +1.94  P12 +10.28  P06 +12.48
+       mean +1.52 | median +0.09 | K = 1 better in 9/16 | t p = 0.140, Wilcoxon p = 0.375
+
+Lags against K = 0
+  ML  least squares  refitted, all steps            +0.80 mm   t(15) =  2.07  p = 0.0557 | Wilcoxon p = 0.3225 | better in 8/16
+  AP  least squares  refitted, all steps            +1.52 mm   t(15) =  1.56  p = 0.1404 | Wilcoxon p = 0.3755 | better in 9/16
+  ML  two lags, refitted, all steps                 +0.89 mm   t(15) =  1.87  p = 0.0816 | Wilcoxon p = 0.3484 | better in 8/16
+  AP  two lags, refitted, all steps                 +1.56 mm   t(15) =  1.34  p = 0.2001 | Wilcoxon p = 0.9399 | better in 8/16
+  ML  three lags, refitted, all steps               +0.94 mm   t(15) =  1.70  p = 0.1102 | Wilcoxon p = 0.3755 | better in 10/16
+  AP  three lags, refitted, all steps               +1.58 mm   t(15) =  1.24  p = 0.2331 | Wilcoxon p = 0.8999 | better in 8/16
+
+Refitted rules (B, all steps)
+  ML: MA 29.3  LS 28.5  trend 28.8  spread 0.8 mm | best constant 28.5
+  AP: MA 38.3  LS 36.8  trend 37.5  spread 1.5 mm | best constant 37.0
+
+Frozen against refitted, within each method (B)
+  ML  MA: frozen -> refitted                        +1.57 mm   t(15) =  2.74  p = 0.0153 | Wilcoxon p = 0.0000 | better in 16/16
+  AP  MA: frozen -> refitted                        +2.13 mm   t(15) =  1.84  p = 0.0850 | Wilcoxon p = 0.0000 | better in 16/16
+  ML  LS: frozen -> refitted                        +2.32 mm   t(15) =  2.15  p = 0.0486 | Wilcoxon p = 0.0000 | better in 16/16
+  AP  LS: frozen -> refitted                        +3.02 mm   t(15) =  1.97  p = 0.0674 | Wilcoxon p = 0.0010 | better in 13/16
+  ML  LR: frozen -> refitted                       +15.79 mm   t(15) =  9.45  p = 0.0000 | Wilcoxon p = 0.0000 | better in 16/16
+  AP  LR: frozen -> refitted                       +20.68 mm   t(15) =  7.94  p = 0.0000 | Wilcoxon p = 0.0000 | better in 16/16
+
+All steps so far against the last N only, within each method (+: the window better)
+  ML  B MA: all steps -> last 10                    +0.28 mm   t(15) =  0.40  p = 0.6915 | Wilcoxon p = 0.1754 | better in 5/16
+  AP  B MA: all steps -> last 10                    +0.77 mm   t(15) =  0.54  p = 0.5952 | Wilcoxon p = 0.0577 | better in 2/16
+  ML  B MA: all steps -> last 20                    +0.77 mm   t(15) =  1.27  p = 0.2230 | Wilcoxon p = 0.5619 | better in 9/16
+  AP  B MA: all steps -> last 20                    +1.43 mm   t(15) =  1.18  p = 0.2577 | Wilcoxon p = 0.5282 | better in 6/16
+  ML  B MA: all steps -> last 30                    +0.79 mm   t(15) =  1.47  p = 0.1619 | Wilcoxon p = 0.1297 | better in 9/16
+  AP  B MA: all steps -> last 30                    +1.39 mm   t(15) =  1.34  p = 0.2000 | Wilcoxon p = 0.5619 | better in 9/16
+  ML  B MA: all steps -> last 40                    +0.75 mm   t(15) =  1.61  p = 0.1275 | Wilcoxon p = 0.0335 | better in 10/16
+  AP  B MA: all steps -> last 40                    +1.19 mm   t(15) =  1.34  p = 0.1987 | Wilcoxon p = 0.4637 | better in 10/16
+  ML  B MA: all steps -> last 50                    +0.70 mm   t(15) =  1.71  p = 0.1069 | Wilcoxon p = 0.0214 | better in 10/16
+  AP  B MA: all steps -> last 50                    +1.09 mm   t(15) =  1.48  p = 0.1584 | Wilcoxon p = 0.0654 | better in 10/16
+  ML  B LS: all steps -> last 10                    -3.64 mm   t(15) = -6.80  p = 0.0000 | Wilcoxon p = 0.0001 | better in 1/16
+  AP  B LS: all steps -> last 10                   -21.38 mm   t(15) = -6.24  p = 0.0000 | Wilcoxon p = 0.0001 | better in 1/16
+  ML  B LS: all steps -> last 20                    -0.67 mm   t(15) = -2.22  p = 0.0420 | Wilcoxon p = 0.0110 | better in 2/16
+  AP  B LS: all steps -> last 20                    -3.39 mm   t(15) = -3.16  p = 0.0064 | Wilcoxon p = 0.0027 | better in 1/16
+  ML  B LS: all steps -> last 30                    -0.15 mm   t(15) = -0.60  p = 0.5553 | Wilcoxon p = 0.1439 | better in 4/16
+  AP  B LS: all steps -> last 30                    -1.24 mm   t(15) = -1.87  p = 0.0807 | Wilcoxon p = 0.0076 | better in 2/16
+  ML  B LS: all steps -> last 40                    +0.10 mm   t(15) =  0.43  p = 0.6725 | Wilcoxon p = 0.7057 | better in 6/16
+  AP  B LS: all steps -> last 40                    -0.49 mm   t(15) = -1.05  p = 0.3092 | Wilcoxon p = 0.0131 | better in 3/16
+  ML  B LS: all steps -> last 50                    +0.20 mm   t(15) =  1.05  p = 0.3111 | Wilcoxon p = 0.8603 | better in 8/16
+  AP  B LS: all steps -> last 50                    +0.00 mm   t(15) =  0.01  p = 0.9945 | Wilcoxon p = 0.0739 | better in 4/16
+  ML  B LR: all steps -> last 10                    -4.45 mm   t(15) = -7.95  p = 0.0000 | Wilcoxon p = 0.0001 | better in 1/16
+  AP  B LR: all steps -> last 10                    -5.10 mm   t(15) = -5.10  p = 0.0001 | Wilcoxon p = 0.0008 | better in 2/16
+  ML  B LR: all steps -> last 20                    -1.57 mm   t(15) = -4.26  p = 0.0007 | Wilcoxon p = 0.0042 | better in 2/16
+  AP  B LR: all steps -> last 20                    -1.35 mm   t(15) = -1.71  p = 0.1071 | Wilcoxon p = 0.0577 | better in 2/16
+  ML  B LR: all steps -> last 30                    -0.73 mm   t(15) = -2.48  p = 0.0255 | Wilcoxon p = 0.0250 | better in 2/16
+  AP  B LR: all steps -> last 30                    -0.42 mm   t(15) = -0.58  p = 0.5692 | Wilcoxon p = 0.0577 | better in 2/16
+  ML  B LR: all steps -> last 40                    -0.33 mm   t(15) = -1.28  p = 0.2196 | Wilcoxon p = 0.0507 | better in 2/16
+  AP  B LR: all steps -> last 40                    +0.07 mm   t(15) =  0.11  p = 0.9162 | Wilcoxon p = 0.0577 | better in 2/16
+  ML  B LR: all steps -> last 50                    -0.14 mm   t(15) = -0.64  p = 0.5298 | Wilcoxon p = 0.0577 | better in 2/16
+  AP  B LR: all steps -> last 50                    +0.17 mm   t(15) =  0.33  p = 0.7495 | Wilcoxon p = 0.0654 | better in 3/16
+  ML  A MA: all steps -> last 10                    -4.80 mm   t(15) = -9.24  p = 0.0000 | Wilcoxon p = 0.0000 | better in 0/16
+  AP  A MA: all steps -> last 10                   -10.50 mm   t(15) = -7.31  p = 0.0000 | Wilcoxon p = 0.0001 | better in 1/16
+  ML  A MA: all steps -> last 20                    -1.34 mm   t(15) = -4.23  p = 0.0007 | Wilcoxon p = 0.0004 | better in 1/16
+  AP  A MA: all steps -> last 20                    -4.34 mm   t(15) = -4.88  p = 0.0002 | Wilcoxon p = 0.0010 | better in 2/16
+  ML  A MA: all steps -> last 30                    -0.61 mm   t(15) = -2.63  p = 0.0189 | Wilcoxon p = 0.0214 | better in 3/16
+  AP  A MA: all steps -> last 30                    -2.00 mm   t(15) = -2.93  p = 0.0103 | Wilcoxon p = 0.0131 | better in 3/16
+  ML  A MA: all steps -> last 40                    -0.19 mm   t(15) = -0.86  p = 0.4022 | Wilcoxon p = 0.4332 | better in 7/16
+  AP  A MA: all steps -> last 40                    -1.17 mm   t(15) = -2.07  p = 0.0566 | Wilcoxon p = 0.0214 | better in 3/16
+  ML  A MA: all steps -> last 50                    -0.01 mm   t(15) = -0.04  p = 0.9698 | Wilcoxon p = 0.9399 | better in 8/16
+  AP  A MA: all steps -> last 50                    -0.56 mm   t(15) = -1.13  p = 0.2753 | Wilcoxon p = 0.0739 | better in 4/16
+  ML  A LS: all steps -> last 10                    -8.04 mm   t(15) = -12.90  p = 0.0000 | Wilcoxon p = 0.0000 | better in 0/16
+  AP  A LS: all steps -> last 10                   -17.61 mm   t(15) = -10.40  p = 0.0000 | Wilcoxon p = 0.0000 | better in 0/16
+  ML  A LS: all steps -> last 20                    -2.25 mm   t(15) = -6.55  p = 0.0000 | Wilcoxon p = 0.0000 | better in 0/16
+  AP  A LS: all steps -> last 20                    -6.57 mm   t(15) = -6.49  p = 0.0000 | Wilcoxon p = 0.0001 | better in 1/16
+  ML  A LS: all steps -> last 30                    -1.15 mm   t(15) = -4.35  p = 0.0006 | Wilcoxon p = 0.0006 | better in 2/16
+  AP  A LS: all steps -> last 30                    -3.15 mm   t(15) = -4.16  p = 0.0008 | Wilcoxon p = 0.0013 | better in 2/16
+  ML  A LS: all steps -> last 40                    -0.50 mm   t(15) = -2.04  p = 0.0594 | Wilcoxon p = 0.0934 | better in 4/16
+  AP  A LS: all steps -> last 40                    -2.05 mm   t(15) = -3.11  p = 0.0071 | Wilcoxon p = 0.0110 | better in 2/16
+  ML  A LS: all steps -> last 50                    -0.20 mm   t(15) = -1.09  p = 0.2945 | Wilcoxon p = 0.3755 | better in 6/16
+  AP  A LS: all steps -> last 50                    -1.09 mm   t(15) = -2.10  p = 0.0526 | Wilcoxon p = 0.0182 | better in 2/16
+  ML  A LR: all steps -> last 10                   -10.09 mm   t(15) = -11.91  p = 0.0000 | Wilcoxon p = 0.0000 | better in 0/16
+  AP  A LR: all steps -> last 10                   -16.27 mm   t(15) = -11.18  p = 0.0000 | Wilcoxon p = 0.0000 | better in 0/16
+  ML  A LR: all steps -> last 20                    -3.39 mm   t(15) = -8.98  p = 0.0000 | Wilcoxon p = 0.0000 | better in 0/16
+  AP  A LR: all steps -> last 20                    -6.56 mm   t(15) = -7.24  p = 0.0000 | Wilcoxon p = 0.0001 | better in 1/16
+  ML  A LR: all steps -> last 30                    -1.99 mm   t(15) = -7.24  p = 0.0000 | Wilcoxon p = 0.0000 | better in 0/16
+  AP  A LR: all steps -> last 30                    -3.34 mm   t(15) = -4.72  p = 0.0003 | Wilcoxon p = 0.0008 | better in 2/16
+  ML  A LR: all steps -> last 40                    -1.19 mm   t(15) = -6.15  p = 0.0000 | Wilcoxon p = 0.0002 | better in 2/16
+  AP  A LR: all steps -> last 40                    -1.98 mm   t(15) = -3.51  p = 0.0032 | Wilcoxon p = 0.0063 | better in 2/16
+  ML  A LR: all steps -> last 50                    -0.78 mm   t(15) = -5.86  p = 0.0000 | Wilcoxon p = 0.0001 | better in 1/16
+  AP  A LR: all steps -> last 50                    -1.23 mm   t(15) = -2.43  p = 0.0283 | Wilcoxon p = 0.0110 | better in 2/16
+
+Velocity term under the selected rule: sacrum position alone against the XCoM
+  ML  sacrum position only  33.8 -> XCoM  29.3 mm  (+4.44 mm, t(15) = 3.18, p = 0.0062, Wilcoxon p = 0.0076, better in 13/16)
+  AP  sacrum position only  42.2 -> XCoM  38.3 mm  (+3.91 mm, t(15) = 2.53, p = 0.0232, Wilcoxon p = 0.0335, better in 14/16)
+
+SPE under the selected rule (ML MA_expand, AP MA_expand)
+  ML  SPE SD 28.4 +- 7.1 mm (range 16.1-40.3) | held-out bias 3.6 mm
+  AP  SPE SD 37.0 +- 8.6 mm (range 26.9-53.3) | held-out bias 4.8 mm
+  obstacle blocks, other steps against crossing steps:
+  ML  SPE SD 28 -> 50 mm (p = 0.0000, higher in 16/16); target from past landings only 50 -> 69 mm (ratios differ p = 0.0020)
+  AP  SPE SD 31 -> 92 mm (p = 0.0000, higher in 16/16); target from past landings only 81 -> 118 mm (ratios differ p = 0.0000)
+
+Per participant, held-out RMSE (mm): Wang & Srinivasan (refitted, all steps) / SFP
+  ML   P02 30.0/31.0  P03 21.5/22.4  P04 19.5/20.9  P05 24.6/25.6  P06 28.6/36.1  P07 26.4/26.8  P08 20.5/20.7  P10 40.1/40.4  P11 25.0/27.5  P12 32.0/40.2  P13 26.2/25.9  P14 34.2/35.0  P15 19.8/27.2  P16 15.8/17.1  P17 36.3/37.6  P18 33.3/34.9
+  AP   P02 27.7/29.0  P03 31.0/30.8  P04 28.3/28.6  P05 31.3/36.6  P06 43.5/59.6  P07 52.3/53.1  P08 25.6/27.0  P10 44.1/45.9  P11 38.4/37.5  P12 27.9/43.4  P13 32.5/32.3  P14 44.0/45.8  P15 30.2/29.1  P16 25.8/27.2  P17 38.4/37.3  P18 46.3/49.5

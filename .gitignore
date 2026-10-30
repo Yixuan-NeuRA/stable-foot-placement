@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+data/*
+!data/README.md
+results/*.csv
+results/log_*.txt

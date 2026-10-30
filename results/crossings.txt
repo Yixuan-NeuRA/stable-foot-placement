@@ -1,0 +1,19 @@
+steps in obstacle blocks 15723 (labelled crossings 1099), in obstacle-free blocks 5790 (labelled 35)
+
+ML: held-out error by step group (participant means; refitted on all preceding steps, scored from step 50)
+  group                       steps   n |    SFP    W&S |            SFP - W&S | signed SFP/W&S
+  crossing (kinematic)          836  18 |   61.4   56.6 |  +4.7 W&S better 14/18 p=0.018 |   +1.2/  +1.5
+  after 1-3 steps              2180  18 |   32.7   31.2 |  +1.5 W&S better 11/18 p=0.154 |   +0.5/  +0.3
+  other, obstacle blocks       9007  18 |   27.9   26.2 |  +1.7 W&S better 15/18 p=0.000 |   +2.0/  +1.8
+  obstacle-free blocks         4390  14 |   23.8   21.2 |  +2.5 W&S better 12/14 p=0.001 |   -0.3/  +0.6
+
+AP: held-out error by step group (participant means; refitted on all preceding steps, scored from step 50)
+  group                       steps   n |    SFP    W&S |            SFP - W&S | signed SFP/W&S
+  crossing (kinematic)          836  18 |  115.7  107.2 |  +8.5 W&S better 14/18 p=0.034 |  +54.3/ +42.1
+  after 1-3 steps              2180  18 |   30.1   27.5 |  +2.5 W&S better  7/18 p=0.799 |   -4.1/  -2.1
+  other, obstacle blocks       9007  18 |   32.8   31.1 |  +1.7 W&S better 10/18 p=0.442 |   -6.0/  -3.5
+  obstacle-free blocks         4390  14 |   22.8   20.7 |  +2.2 W&S better  9/14 p=0.173 |   -4.1/  -1.1
+
+Error on crossing steps relative to the other steps of obstacle blocks (participant means of the RMSE ratio)
+  ML: SFP x2.19, W&S x2.15
+  AP: SFP x3.80, W&S x3.60

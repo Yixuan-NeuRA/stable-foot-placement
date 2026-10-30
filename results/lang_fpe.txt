@@ -1,0 +1,24 @@
+
+All steps: participant means (n = 18), mm
+  ML: FPE mid-swing  25.5 (R2   42%), terminal swing  16.9 (R2   73%), toe-off  27.4 (R2   34%) | SPE SD  28.7, W&S held-out SD  27.2
+       SPE SD against FPE_mid  : Spearman +0.81 (p = 0.0000), Pearson +0.80 (p = 0.0001)
+       SPE SD against FPE_term : Spearman +0.68 (p = 0.0020), Pearson +0.41 (p = 0.0880)
+       SPE SD against FPE_to   : Spearman +0.80 (p = 0.0001), Pearson +0.80 (p = 0.0001)
+       SPE SD against WS_oos_sd: Spearman +0.93 (p = 0.0000), Pearson +0.95 (p = 0.0000)
+  AP: FPE mid-swing  46.9 (R2   24%), terminal swing  31.4 (R2   63%), toe-off  48.7 (R2   17%) | SPE SD  36.6, W&S held-out SD  34.8
+       SPE SD against FPE_mid  : Spearman +0.67 (p = 0.0024), Pearson +0.72 (p = 0.0007)
+       SPE SD against FPE_term : Spearman +0.64 (p = 0.0038), Pearson +0.67 (p = 0.0021)
+       SPE SD against FPE_to   : Spearman +0.69 (p = 0.0014), Pearson +0.79 (p = 0.0001)
+       SPE SD against WS_oos_sd: Spearman +0.86 (p = 0.0000), Pearson +0.91 (p = 0.0000)
+
+Steps without an obstacle crossing: participant means (n = 18), mm
+  ML: FPE mid-swing  23.8 (R2   43%), terminal swing  15.8 (R2   73%), toe-off  25.0 (R2   38%) | SPE SD  26.0, W&S held-out SD  24.8
+       SPE SD against FPE_mid  : Spearman +0.83 (p = 0.0000), Pearson +0.80 (p = 0.0001)
+       SPE SD against FPE_term : Spearman +0.70 (p = 0.0013), Pearson +0.43 (p = 0.0734)
+       SPE SD against FPE_to   : Spearman +0.81 (p = 0.0000), Pearson +0.80 (p = 0.0001)
+       SPE SD against WS_oos_sd: Spearman +0.98 (p = 0.0000), Pearson +0.97 (p = 0.0000)
+  AP: FPE mid-swing  33.2 (R2   33%), terminal swing  21.5 (R2   69%), toe-off  36.6 (R2   19%) | SPE SD  27.5, W&S held-out SD  26.9
+       SPE SD against FPE_mid  : Spearman +0.71 (p = 0.0010), Pearson +0.67 (p = 0.0024)
+       SPE SD against FPE_term : Spearman +0.64 (p = 0.0042), Pearson +0.75 (p = 0.0004)
+       SPE SD against FPE_to   : Spearman +0.77 (p = 0.0002), Pearson +0.77 (p = 0.0002)
+       SPE SD against WS_oos_sd: Spearman +0.85 (p = 0.0000), Pearson +0.89 (p = 0.0000)

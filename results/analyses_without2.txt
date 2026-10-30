@@ -1,0 +1,51 @@
+Table 1: descriptives, per participant, then over the 16 participants
+  Gait speed (m/s)                                1.01 +- 0.17   range 0.68-1.34
+  Cadence (steps/min)                              108 +- 10   range 90-127
+  Step time (s)                                  0.560 +- 0.054   range 0.473-0.663
+  Swing time (s)                                 0.398 +- 0.030   range 0.350-0.481
+  Step length (mm)                                 516 +- 70   range 394-645
+  Step width (mm)                                  159 +- 31   range 108-209
+  Leg length l (m)                                0.95 +- 0.10   range 0.76-1.15
+  w0 (1/s)                                        3.23 +- 0.17   range 2.92-3.59
+  Margin at heel strike, ML (magnitude, mm)         57 +- 18   range 33-92
+  Margin at heel strike, AP (mm)                   467 +- 52   range 384-553
+  Margin at toe-off, ML (magnitude, mm)            133 +- 23   range 98-172
+  Margin at toe-off, AP (mm)                       472 +- 46   range 396-546
+  leg length: left-right difference median 10 mm, largest 55 mm (P14); 30 mm longer than the vertical sacrum height on average
+
+  belt speed by block (m/s): V1 0.94, V2 0.99, V3 1.06
+  frames rejected (qc_bad, jump or missing): mean 0.8%, none in 40 of 47 blocks, largest 21.6%
+
+Landing against the XCoM at heel strike, p = c xi + b per cell
+  ML: c = 0.906 +- 0.070, R2 = 0.844; against one t(15) = -5.40, p = 0.0001, below one in 16/16
+      a unit slope misplaces the target by 4.7 mm per SD of the within-cell XCoM
+  AP: c = 0.903 +- 0.077, R2 = 0.744; against one t(15) = -5.00, p = 0.0002, below one in 16/16
+      a unit slope misplaces the target by 8.0 mm per SD of the within-cell XCoM
+
+The margin, by side and by read instant
+  ML at heel strike: right +60 mm, left -50 mm (right-left +110, t(15) = 10.92, p = 0.0000)
+  ML at toe-off:     right +141 mm, left -125 mm; swing excursion right +81, left -75
+      side means sum to +11 mm (-126 to +108); opposite-signed on the two feet in 41/47 blocks
+  AP at heel strike: right +471 mm, left +462 mm (right-left +8, t(15) = 0.81, p = 0.4334)
+  AP at toe-off:     right +479 mm, left +466 mm; swing excursion right +8, left +4
+
+  ML lag-1 autocorrelation: margin at heel strike +0.227, at toe-off +0.078
+  AP lag-1 autocorrelation: margin at heel strike +0.085, at toe-off +0.116
+
+Prediction from toe-off: correlation of the landing with sacrum position and with the XCoM
+  ML: r 0.715 -> 0.782  dr = +0.067 (95% CI +0.027 to +0.106), t(15) = 3.61, p = 0.00257, higher in 15/16
+  AP: r 0.822 -> 0.858  dr = +0.035 (95% CI +0.019 to +0.052), t(15) = 4.52, p = 0.00041, higher in 15/16
+
+  ML: freely fitted within cell r = 0.812; the pendulum's weight gives 69% of the gain of a free fit (remaining gap p = 0.0268)
+  AP: freely fitted within cell r = 0.866; the pendulum's weight gives 81% of the gain of a free fit (remaining gap p = 0.0251)
+
+  ML read at mid-swing: fitted velocity coefficient +0.369 s = 1.19 of 1/w0 (0.310 s)
+  AP read at mid-swing: fitted velocity coefficient +0.149 s = 0.48 of 1/w0 (0.310 s)
+
+Obstacle-crossing steps and the steps after them
+  crossing steps labelled: 999 of 14327 (7.0%) in the obstacle blocks; clearance 74 mm on other steps, 185 mm on crossings
+  labelled in the obstacle-free blocks: 33 of 5347 (0.62%)
+  ML dr on the crossing step: other steps +0.074, crossing +0.061 (t(15) = -0.80, p = 0.4362)
+  AP dr on the crossing step: other steps +0.036, crossing -0.006 (t(15) = -2.26, p = 0.0394)
+  ML the 1-3 same-foot steps after a crossing: +0.068 -> +0.111 (t(15) = 4.21, p = 0.0008, higher in 14/16)
+  AP the 1-3 same-foot steps after a crossing: +0.036 -> +0.046 (t(15) = 0.95, p = 0.3591, higher in 11/16)
